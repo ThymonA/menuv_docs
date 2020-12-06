@@ -1,0 +1,69 @@
+{
+    "template": {
+        "path": "default",
+        "document": {
+            "title": "MenuV"
+        },
+        "options": {
+            "title": {
+                "label": "MenuV",
+                "href": "."
+            },
+            "logo": {
+                "dark": "./img/menuv_dark.png",
+                "light": "./img/menuv_light.png"
+            },
+            "sidebar": true,
+            "collapsed": false,
+            "badges": true,
+            "search": true,
+            "navbar": true,
+            "navItems": [
+                {
+                    "iconClass": "ico-book",
+                    "label": "Documentation",
+                    "href": "api/"
+                }
+            ]
+        }
+    },
+    "jsdoc": {
+        "encoding": "utf8",
+        "recurse": true,
+        "pedantic": true,
+        "access": "all",
+        "package": null,
+        "module": true,
+        "undocumented": false,
+        "undescribed": true,
+        "hierarchy": true,
+        "sort": "kind",
+        "filter": null,
+        "allowUnknownTags": true
+    },
+    "debug": true,
+    "markdown": {
+        "gfm": true,
+        "tables": true,
+        "breaks": true,
+        "pedantic": true,
+        "sanitize": true,
+        "smartLists": true,
+        "smartypants": true,
+        "xhtml": true,
+        "tasks": true,
+        "emoji": true
+    },
+    "app": {
+        "title": "MenuV Documentation",
+        "routing": "path"
+    },
+    "src": [
+        "./docs/*.md",
+        "./docs/**/*.md",
+        "./src/*.js",
+        "./src/**/*.js"
+    ],
+    "dest": "./output/docs",
+    "clean": true
+}

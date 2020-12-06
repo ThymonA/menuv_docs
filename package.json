@@ -1,0 +1,29 @@
+{
+  "name": "menuv_docs",
+  "version": "1.0.0",
+  "description": "Documentation for MenuV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThymonA/menuv_docs.git"
+  },
+  "keywords": [
+    "menuv",
+    "docs",
+    "fivem",
+    "nui",
+    "library"
+  ],
+  "author": "ThymonA",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThymonA/menuv_docs/issues"
+  },
+  "homepage": "https://github.com/ThymonA/menuv_docs#readme",
+  "devDependencies": {
+    "docma": "^3.2.2"
+  }
+}
