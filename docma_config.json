@@ -31,7 +31,7 @@
         "encoding": "utf8",
         "recurse": true,
         "pedantic": true,
-        "access": "all",
+        "access": "public",
         "package": null,
         "module": true,
         "undocumented": false,
@@ -56,13 +56,15 @@
     },
     "app": {
         "title": "MenuV Documentation",
-        "routing": "path"
+        "routing": "path",
+        "server": "static"
     },
     "src": [
         "./docs/*.md",
         "./docs/**/*.md",
         "./src/*.js",
-        "./src/**/*.js"
+        "./src/**/*.js",
+        "./src/**/*.ts"
     ],
     "dest": "./output/docs",
     "clean": true

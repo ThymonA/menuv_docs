@@ -1,7 +1,10 @@
+import { Item } from './items/item';
+
 /**
  * Create a new menu item
  * 
  * @param {object} info Information
+ * @access protected
  * @returns {Item} - New menu item
  * @global
  */
@@ -10,6 +13,6 @@ const CreateMenuItem = function(info) {
 }
 
 module.exports = {
-    CreateMenuItem: CreateMenuItem,
-    Item: Item   
+    CreateMenuItem,
+    Item
 }

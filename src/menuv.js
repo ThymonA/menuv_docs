@@ -12,6 +12,7 @@ import Menu from './classes/menu';
 /**
  * CreateMenu options
  * 
+ * @access protected
  * @typedef {object} CreateMenu~options
  * 
  * @param {string} [options.namespace=unknown]
@@ -57,34 +58,123 @@ import Menu from './classes/menu';
  * @name MenuV
  * @alias MenuV
  * @class MenuV
+ * @namespace MenuV
  */
-class MenuV {}
+class MenuV {
+    /**
+     * Class name of {@link #MenuV|MenuV}
+     * @memberof MenuV
+     * @access protected
+     * @private
+     * @readonly
+     * @type {string}
+     * @default 'MenuV'
+     */
+    __class = 'MenuV';
+
+    /**
+     * Defined type of {@link #MenuV|MenuV}
+     * @memberof MenuV
+     * @access protected
+     * @private
+     * @readonly
+     * @type {string}
+     * @default 'MenuV'
+     */
+    __type = 'MenuV';
+
+    /**
+     * Create a `MenuV` menu
+     * @memberof MenuV
+     * @access public
+     * @param {MenuV} MenuV
+     * @param {string|boolean} [title='MenuV']
+     *        Title that appears on the big banner.
+     * @param {string} [subtitle='']
+     *        Subtitle that appears in capital letters in a small black bar.
+     * @param {string} [position='topleft']
+     *        Menu position on screen
+     *        
+     *        
+     *        <strong>options:</strong> 
+     *        
+     *        `topleft` | `topcenter` | `topright` | `centerleft` | `center` | `centerright` | `bottomleft` | `bottomcenter` | `bottomright`
+     * @param {number} [r=0]
+     *        Primary color <strong>RGB</strong> red channel [0-255]
+     * @param {number} [g=0]
+     *        Primary color <strong>RGB</strong> green channel [0-255]
+     * @param {number} [b=255]
+     *        Primary color <strong>RGB</strong> blue channel [0-255]
+     * @param {string} [size='size-110']
+     *        Menu size in %
+     *        
+     *        
+     *        <strong>options:</strong> 
+     *        
+     *        `size-100` | `size-110` | `size-125` | `size-150` | `size-175` | `size-200`
+     * @param {string} [texture='default']
+     *        Texture name for the banner image
+     * @param {string} [dictionary='menuv']
+     *        Texture dictionary name for the banner image
+     * @param {string} [namespace='unknown']
+     *         Namespace is required to set keybinds, make sure given namespace is unique for every menu.
+     * @returns {Menu}
+     */
+    CreateMenu(MenuV, title, subtitle, position, r, g, b, size, texture, dictionary, namespace) {};
+
+    /**
+     * Returns created menu matching `UUID`
+     * @memberof MenuV
+     * @access public
+     * @param {MenuV} MenuV
+     * @param {string} uuid Universally Unique Identifier (UUID)
+     * @returns {Menu|null} Returns matching menu or `nil`
+     */
+    GetMenu(MenuV, uuid) {};
+
+    /**
+     * Open a menu
+     * @memberof MenuV
+     * @access public
+     * @param {MenuV} MenuV 
+     * @param {Menu|string} menu Menu or Universally Unique Identifier (UUID)
+     * @param {function} [callback] Trigger callback when function has been executed
+     */
+    OpenMenu(MenuV, menu, callback) {};
+
+    /**
+     * Close a menu
+     * @memberof MenuV
+     * @access public
+     * @param {MenuV} MenuV 
+     * @param {Menu|string} menu Menu or Universally Unique Identifier (UUID)
+     * @param {function} [callback] Trigger callback when function has been executed
+     */
+    CloseMenu(MenuV, menu, callback) {};
+
+    /**
+     * Register keybind for specific menu, a unqiue {@link #Menu.Namespace|Menu.Namespace} is required
+     * @memberof MenuV
+     * @access protected
+     * @param {MenuV} MenuV 
+     * @param {Menu|string} menu Menu or Universally Unique Identifier (UUID)
+     * @param {function} func Trigger this function when button has been pressed
+     * @param {string} description Description in FiveM keybinds
+     * @param {string} defaultType Default input type, like: KEYBOARD, MOUSE_BUTTON etc.
+     * @param {string} defaultKey Default input button, like: E, F12, LEFT_BUTTON etc.
+     */
+    AddControlKey(MenuV, menu, func, description, defaultType, defaultKey) {};
+}
 
 /**
- * Class name of @see MenuV
- * @memberof MenuV
- * @access private
- * @private
- * @readonly
- * @type {string}
- * @default 'MenuV'
+ * Register callback handler for MenuV
+ * @global
+ * @access protected
+ * @namespace exports.NUICallback
+ * @exports NUICallback
+ * @param {string} name Name of NUI callback
+ * @param {table} info Information from NUI
+ * @param {function} callback NUI callback function
  */
-MenuV.__class = 'MenuV';
-
-/**
- * Defined type of @see MenuV
- * @memberof MenuV
- * @access private
- * @private
- * @readonly
- * @type {string}
- * @default 'MenuV'
- */
-MenuV.__type = 'MenuV';
-
-/**
- * @memberof MenuV
- * @returns {Menu}
- */
-MenuV.CreateMenu = function() {
-};
+export default NUICallback = function(name, info, callback) {
+}
