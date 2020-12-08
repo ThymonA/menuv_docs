@@ -4,7 +4,7 @@ import { ButtonItem } from './items/button';
 
 /**
  * Create a new menu
- * @param {table} [options={}] Create menu options, see {@link #CreateMenu~options|options}
+ * @param {table} [options={}] Create menu options, see {@link #Menu~options|options}
  *      
  * @access protected
  * @returns {Menu} - New menu

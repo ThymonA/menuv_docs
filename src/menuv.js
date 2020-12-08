@@ -12,8 +12,9 @@ import Menu from './classes/menu';
 /**
  * CreateMenu options
  * 
- * @access protected
- * @typedef {object} CreateMenu~options
+ * @access public
+ * @memberof Menu
+ * @typedef {object} Menu~options
  * 
  * @param {string} [options.namespace=unknown]
  *        Namespace is required to set keybinds, make sure given namespace is unique for every menu.
@@ -123,6 +124,18 @@ class MenuV {
     CreateMenu(MenuV, title, subtitle, position, r, g, b, size, texture, dictionary, namespace) {};
 
     /**
+     * Create a new menu from properties of this one (without items and events)
+     * @memberof MenuV
+     * @access public
+     * @param {MenuV} MenuV
+     * @param {Menu} menu Menu to take properties from
+     * @param {table} overrides A table with key values to override, see {@link #Menu~options|Menu options}
+     * @param {string} namespace Unique namespace, see {@link #Menu.Namespace|Menu.Namespace}
+     * @returns {Menu} - New menu with properties of this one
+     */
+    InheritMenu(MenuV, menu, overrides, namespace) {};
+
+    /**
      * Returns created menu matching `UUID`
      * @memberof MenuV
      * @access public
@@ -164,6 +177,13 @@ class MenuV {
      * @param {string} defaultKey Default input button, like: E, F12, LEFT_BUTTON etc.
      */
     AddControlKey(MenuV, menu, func, description, defaultType, defaultKey) {};
+
+    /**
+     * Checks if namespace is available
+     * @param {string} namespace Namespace, see {@link #Menu.Namespace|Menu.Namespace}
+     * @returns {boolean} Return `true` if given namespace is available, otherwise `false`
+     */
+    IsNamespaceAvailable(namespace) {};
 }
 
 /**

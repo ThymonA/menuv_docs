@@ -366,9 +366,22 @@ class Menu {
      * <strong>Type:</strong> `function`
      * 
      * Transform {@link #Menu|Menu} to `table`
+     * @memberof Menu
+     * @access public
      * @param {Menu} menu Menu
      */
     ToTable(menu) {};
+
+    /**
+     * Create a new menu from properties of this one (without items and events)
+     * @memberof Menu
+     * @access public
+     * @param {Menu} menu Menu
+     * @param {table} overrides A table with key values to override, see {@link #Menu~options|Menu options}
+     * @param {string} namespace Unique namespace, see {@link #Menu.Namespace|Menu.Namespace}
+     * @returns {Menu} - New menu with properties of this one
+     */
+    InheritMenu(menu, overrides, namespace) {};
 
     /**
      * <strong>Type:</strong> `function`
