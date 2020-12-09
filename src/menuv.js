@@ -118,10 +118,12 @@ class MenuV {
      * @param {string} [dictionary='menuv']
      *        Texture dictionary name for the banner image
      * @param {string} [namespace='unknown']
-     *         Namespace is required to set keybinds, make sure given namespace is unique for every menu.
+     *        Namespace is required to set keybinds, make sure given namespace is unique for every menu.
+     * @param {string} [theme='default']
+     *        Change the look of the menu, available options: `default` and `native`
      * @returns {Menu}
      */
-    CreateMenu(MenuV, title, subtitle, position, r, g, b, size, texture, dictionary, namespace) {};
+    CreateMenu(MenuV, title, subtitle, position, r, g, b, size, texture, dictionary, namespace, theme) {};
 
     /**
      * Create a new menu from properties of this one (without items and events)

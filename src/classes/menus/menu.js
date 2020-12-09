@@ -12,6 +12,22 @@ class Menu {
     /**
      * <strong>Type:</strong> `string`
      * 
+     * Change the look of MenuV by changing the theme
+     * 
+     * <strong>Default:</strong> https://i.imgur.com/xGagIBm.png
+     * 
+     * <strong>Native:</strong> https://i.imgur.com/KSkeiQm.png
+     * @memberof Menu
+     * @access public
+     * @type {string}
+     * @readonly
+     * @default 'default'
+     */
+    Theme = 'default';
+
+    /**
+     * <strong>Type:</strong> `string`
+     * 
      * Namespace is required to set keybinds, make sure given namespace is unique for every menu.
      * @memberof Menu
      * @access public
