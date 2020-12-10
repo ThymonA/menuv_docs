@@ -8,6 +8,8 @@ import { Item } from './item';
  */
 class CheckboxItem extends Item {
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Defined type of {@link #CheckboxItem|CheckboxItem}
      * @memberof CheckboxItem
      * @access protected
@@ -19,6 +21,8 @@ class CheckboxItem extends Item {
     __type = "checkbox";
 
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Primary event of {@link #CheckboxItem|CheckboxItem}
      * @memberof CheckboxItem
      * @access protected
@@ -30,6 +34,8 @@ class CheckboxItem extends Item {
     __event = "OnCheck";
 
     /**
+     * <strong>Type:</strong> `boolean`
+     * 
      * Value of {@link #CheckboxItem|CheckboxItem}
      * @memberof CheckboxItem
      * @access public
@@ -40,6 +46,8 @@ class CheckboxItem extends Item {
 };
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user changed checkbox state
  * @memberof CheckboxItem
  * @access public
@@ -56,6 +64,8 @@ end)
 CheckboxItem.On(CheckboxItem, 'change', function(item, newValue, oldValue) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user check the checkbox
  * @memberof CheckboxItem
  * @access public
@@ -70,6 +80,8 @@ end)
 CheckboxItem.On(CheckboxItem, 'check', function(item) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user uncheck the checkbox
  * @memberof CheckboxItem
  * @access public

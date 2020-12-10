@@ -8,6 +8,8 @@ import { Item } from './item';
  */
 class RangeItem extends Item {
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Defined type of {@link #RangeItem|RangeItem}
      * @memberof RangeItem
      * @access protected
@@ -19,6 +21,8 @@ class RangeItem extends Item {
     __type = "range";
 
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Primary event of {@link #RangeItem|RangeItem}
      * @memberof RangeItem
      * @access protected
@@ -30,6 +34,8 @@ class RangeItem extends Item {
     __event = "OnSelect";
 
     /**
+     * <strong>Type:</strong> `number`
+     * 
      * Value of range item (default lowest possible value)
      * @memberof RangeItem
      * @access public
@@ -39,6 +45,8 @@ class RangeItem extends Item {
     Value = 0;
 
     /**
+     * <strong>Type:</strong> `number`
+     * 
      * Minimal possible value
      * @memberof RangeItem
      * @access public
@@ -48,6 +56,8 @@ class RangeItem extends Item {
     Min = 0;
 
     /**
+     * <strong>Type:</strong> `number`
+     * 
      * Maximal possible value
      * @memberof RangeItem
      * @access public
@@ -57,12 +67,16 @@ class RangeItem extends Item {
     Max = 0;
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Change {@link #RangeItem.Min|RangeItem.Min}
      * @param {number} input New minimal value
      */
     SetMinValue(input) {};
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Change {@link #RangeItem.Max|RangeItem.Max}
      * @param {number} input New maximal value
      */
@@ -70,6 +84,8 @@ class RangeItem extends Item {
 };
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user changed range state
  * @memberof RangeItem
  * @access public
@@ -86,6 +102,8 @@ end)
 RangeItem.On(RangeItem, 'change', function(item, newValue, oldValue) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user pressed 'ENTER' in range item
  * @memberof RangeItem
  * @access public

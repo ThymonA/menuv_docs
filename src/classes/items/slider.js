@@ -8,6 +8,8 @@ import { Item } from './item';
  */
 class SliderItem extends Item {
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Defined type of {@link #SliderItem|SliderItem}
      * @memberof SliderItem
      * @access protected
@@ -19,6 +21,8 @@ class SliderItem extends Item {
     __type = "slider";
 
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Primary event of {@link #SliderItem|SliderItem}
      * @memberof SliderItem
      * @access protected
@@ -30,6 +34,8 @@ class SliderItem extends Item {
     __event = "OnSelect";
 
     /**
+     * <strong>Type:</strong> `number`
+     * 
      * Value of slider item (current selected index)
      * @memberof SliderItem
      * @access public
@@ -39,6 +45,8 @@ class SliderItem extends Item {
     Value = 1;
 
     /**
+     * <strong>Type:</strong> `table`
+     * 
      * List of slider values
      * @memberof SliderItem
      * @access protected
@@ -48,6 +56,8 @@ class SliderItem extends Item {
     Values = {};
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Add a value to slider
      * @memberof SliderItem
      * @access public
@@ -65,6 +75,8 @@ class SliderItem extends Item {
     AddValue(item, value) {};
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Add a list of values to slider
      * @memberof SliderItem
      * @access public
@@ -83,6 +95,8 @@ class SliderItem extends Item {
 };
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user changed slider state
  * @memberof SliderItem
  * @access public
@@ -99,6 +113,8 @@ end)
 SliderItem.On(SliderItem, 'change', function(item, newValue, oldValue) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user pressed 'ENTER' in slider item
  * @memberof SliderItem
  * @access public

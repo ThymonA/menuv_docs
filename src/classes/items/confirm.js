@@ -8,6 +8,8 @@ import { Item } from './item';
  */
 class ConfirmItem extends Item {
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Defined type of {@link #ConfirmItem|ConfirmItem}
      * @memberof ConfirmItem
      * @access protected
@@ -19,6 +21,8 @@ class ConfirmItem extends Item {
     __type = "confirm";
 
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Primary event of {@link #ConfirmItem|ConfirmItem}
      * @memberof ConfirmItem
      * @access protected
@@ -30,6 +34,8 @@ class ConfirmItem extends Item {
     __event = "OnConfirm";
 
     /**
+     * <strong>Type:</strong> `boolean`
+     * 
      * Value of {@link #ConfirmItem|ConfirmItem}
      * @memberof ConfirmItem
      * @access public
@@ -39,6 +45,8 @@ class ConfirmItem extends Item {
     Value = false;
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Confirm this item, set confirm state to `true`
      * @memberof ConfirmItem
      * @access public
@@ -46,6 +54,8 @@ class ConfirmItem extends Item {
     Confirm() {};
 
     /**
+     * <strong>Type:</strong> `function`
+     * 
      * Deny this item, set confirm state to `false`
      * @memberof ConfirmItem
      * @access public
@@ -54,6 +64,8 @@ class ConfirmItem extends Item {
 };
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user changed confirm state
  * @memberof ConfirmItem
  * @access public
@@ -70,6 +82,8 @@ end)
 ConfirmItem.On(ConfirmItem, 'change', function(item, newValue, oldValue) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user confirm the {@link #ConfirmItem|ConfirmItem}
  * @memberof ConfirmItem
  * @access public
@@ -84,6 +98,8 @@ end)
 ConfirmItem.On(ConfirmItem, 'confirm', function(item) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user denied the {@link #ConfirmItem|ConfirmItem}
  * @memberof ConfirmItem
  * @access public

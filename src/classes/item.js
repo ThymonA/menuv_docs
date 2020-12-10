@@ -1,8 +1,9 @@
 import { Item } from './items/item';
 
 /**
- * Create a new menu item
+ * <strong>Type:</strong> `function`
  * 
+ * Create a new menu item
  * @param {object} info Information
  * @access protected
  * @returns {Item} - New menu item

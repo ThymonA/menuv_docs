@@ -8,6 +8,8 @@ import { Item } from './item';
  */
 class ButtonItem extends Item {
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Defined type of {@link #ButtonItem|ButtonItem}
      * @memberof ButtonItem
      * @access protected
@@ -19,6 +21,8 @@ class ButtonItem extends Item {
     __type = "button";
 
     /**
+     * <strong>Type:</strong> `string`
+     * 
      * Primary event of {@link #ButtonItem|ButtonItem}
      * @memberof ButtonItem
      * @access protected
@@ -31,6 +35,8 @@ class ButtonItem extends Item {
 };
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when user pressed `ENTER` on item
  * @memberof ButtonItem
  * @access public

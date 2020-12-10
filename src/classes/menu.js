@@ -3,9 +3,10 @@ import { Item } from './items/item';
 import { ButtonItem } from './items/button';
 
 /**
+ * <strong>Type:</strong> `function`
+ * 
  * Create a new menu
  * @param {table} [options={}] Create menu options, see {@link #Menu~options|options}
- *      
  * @access protected
  * @returns {Menu} - New menu
  * @example

@@ -202,6 +202,14 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to trigger event for
      * @param {string} event Name of `on` event to trigger
      * @param {...*} [params=[]] Additional parameters
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:Trigger('open')
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:Trigger('close')
      */
     Trigger(menu, event, ...params) {}
 
@@ -213,6 +221,10 @@ class Menu {
      * @access protected
      * @this Menu
      * @param {Menu} menu Menu to destroy all threads for
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:DestroyThreads()
      */
     DestroyThreads(menu) {};
 
@@ -226,6 +238,12 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to register function for
      * @param {string} event Name of `on` event to trigger
      * @param {function} func Function to trigger
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:On('open', function(m)
+     *    print('Menu is now open :D')
+     * end)
      * @returns {string} Universally Unique Identifier (UUID)
      */
     On(menu, event, func) {};
@@ -240,6 +258,14 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to remove event for
      * @param {string} event Name of `on` event to remove
      * @param {string} uuid Universally Unique Identifier (UUID) of registered `on` event
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local event_uuid = menu:On('open', function(m)
+     *    print('Menu is now open :D')
+     * end)
+     * 
+     * menu:RemoveOnEvent('open', event_uuid)
      */
     RemoveOnEvent(menu, event, uuid) {};
 
@@ -253,6 +279,10 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to validate input for
      * @param {string} key Name of key to validate input for
      * @param {any} value
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local valid = menu:Validate('Title', 'Example Value')
      * @returns {boolean}
      */
     Validate(menu, key, value) {};
@@ -267,6 +297,10 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to parse values for
      * @param {string} key Name of key to parse input for
      * @param {any} value
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local parsed_value = menu:Parser('Title', 999)
      * @returns {any} Any parsed value
      */
     Parser(menu, key, value) {};
@@ -281,6 +315,10 @@ class Menu {
      * @param {Menu} menu {@link #Menu|Menu} to trigger `NewIndex` for
      * @param {string} key Name of the key that has been set
      * @param {any} value
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:NewIndex('Title', newValue)
      */
     NewIndex(menu, key, value) {};
 
@@ -295,6 +333,12 @@ class Menu {
      * @param {string} description Description in FiveM keybinds
      * @param {string} defaultType Default input type, like: KEYBOARD, MOUSE_BUTTON etc.
      * @param {string} defaultKey Default input button, like: E, F12, LEFT_BUTTON etc.
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:AddControlKey(function()
+     *    print('You pressed F12')
+     * end, 'Example F12 press', 'keyboard', 'F12')
      */
     AddControlKey(menu, func, description, defaultType, defaultKey) {};
 
@@ -307,6 +351,10 @@ class Menu {
      * @param {Menu} menu Menu
      * @param {string} defaultType Default input type, like: KEYBOARD, MOUSE_BUTTON etc.
      * @param {string} defaultKey Default input button, like: E, F12, LEFT_BUTTON etc.
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:OpenWith('keyboard', 'F1')
      */
     OpenWith(menu, defaultType, defaultKey) {};
 
@@ -318,6 +366,10 @@ class Menu {
      * @access public
      * @param {Menu} menu Menu
      * @param {string} title Title of menu
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:SetTitle('Example Title')
      */
     SetTitle(menu, title) {};
 
@@ -327,6 +379,10 @@ class Menu {
      * @access public
      * @param {Menu} menu Menu
      * @param {string} subtitle Subtitle of menu
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:SetSubtitle('Example Subtitle')
      */
     SetSubtitle(menu, subtitle) {};
 
@@ -344,6 +400,10 @@ class Menu {
      * <strong>options:</strong> 
      * 
      * `topleft` | `topcenter` | `topright` | `centerleft` | `center` | `centerright` | `bottomleft` | `bottomcenter` | `bottomright`
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:SetPosition('bottomright')
      */
     SetPosition(menu, position) {};
 
@@ -355,6 +415,14 @@ class Menu {
      * @access public
      * @param {Menu} menu Menu
      * @param {boolean} [update=true] Force NUI update
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:ClearItems()
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:ClearItems(false)
      */
     ClearItems(menu, update) {};
 
@@ -365,6 +433,10 @@ class Menu {
      * @memberof Menu
      * @access public
      * @param {Menu} menu Menu
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:Open()
      */
     Open(menu) {};
 
@@ -375,6 +447,10 @@ class Menu {
      * @memberof Menu
      * @access public
      * @param {Menu} menu Menu
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * menu:Close()
      */
     Close(menu) {};
 
@@ -385,6 +461,10 @@ class Menu {
      * @memberof Menu
      * @access public
      * @param {Menu} menu Menu
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local menuData = menu:ToTable()
      */
     ToTable(menu) {};
 
@@ -395,6 +475,10 @@ class Menu {
      * @param {Menu} menu Menu
      * @param {table} overrides A table with key values to override, see {@link #Menu~options|Menu options}
      * @param {string} namespace Unique namespace, see {@link #Menu.Namespace|Menu.Namespace}
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local menu2 = menu:InheritMenu({title = 'MenuV 2.0', subtitle = 'Inherit menu of `menu`', theme = 'default' })
      * @returns {Menu} - New menu with properties of this one
      */
     InheritMenu(menu, overrides, namespace) {};
@@ -419,6 +503,15 @@ class Menu {
      *             Button menu value, when value is a {@link #Menu|Menu}, MenuV will open that {@link #Menu|Menu} on button select
      *      @param {boolean} [options.disabled=false]
      *             When this option is `true`, button isn't selectable anymore
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local button = menu:AddButton({ icon = '😃', label = 'Example Button', value = 10, description = 'Example button' })
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * local menu2 = menu:InheritMenu({title = 'MenuV 2.0', subtitle = 'Inherit menu of `menu`', theme = 'default' })
+     * 
+     * local button = menu:AddButton({ icon = '😃', label = 'Open Menu2', value = menu2, description = 'Open menu 2.0' })
      * @returns {ButtonItem} - New button item
      */
     AddButton(menu, options) {
@@ -445,6 +538,10 @@ class Menu {
      *             Checkbox item value
      *      @param {boolean} [options.disabled=false]
      *             When this option is `true`, checkbox isn't selectable anymore
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local checkbox = menu:AddCheckbox({ icon = '💡', label = 'Checkbox Example', value = false })
      * @returns {CheckboxItem} - New checkbox item
      */
     AddCheckbox(menu, options) {
@@ -479,6 +576,15 @@ class Menu {
      *                    Value of value item
      *             @param {boolean} [options.disabled=false]
      *                    When this option is `true`, slider isn't selectable anymore
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local slider = menu:AddSlider({ icon = '❤️', label = 'Example Slider', value = 'demo', values = {
+            { label = 'Demo Item', value = 'demo', description = 'Demo Item 1' },
+            { label = 'Demo Item 2', value = 'demo2', description = 'Demo Item 2' },
+            { label = 'Demo Item 3', value = 'demo3', description = 'Demo Item 3' },
+            { label = 'Demo Item 4', value = 'demo4', description = 'Demo Item 4' }
+        }})
      * @returns {SliderItem} - New slider item
      */
     AddSlider(menu, options) {
@@ -509,6 +615,10 @@ class Menu {
      *             Maximal range value
      *      @param {boolean} [options.disabled=false]
      *             When this option is `true`, range item isn't selectable anymore
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local range = menu:AddRange({ icon = '⚽', label = 'Example Range Item', min = 0, max = 10, value = 0, saveOnUpdate = true })
      * @returns {RangeItem} - New range item
      */
     AddRange(menu, options) {
@@ -535,6 +645,10 @@ class Menu {
      *             Confirm menu value
      *      @param {boolean} [options.disabled=false]
      *             When this option is `true`, confirm item isn't selectable anymore
+     * @example
+     * local menu = MenuV:CreateMenu('MenuV', 'Welcome to MenuV', 'topleft', 255, 0, 0, 'size-125', 'example', 'menuv', 'example_namespace', 'native')
+     * 
+     * local confirm = menu:AddConfirm({ icon = '🔥', label = 'Example Confirm', value = false })
      * @returns {ConfirmItem} - New confirm item
      */
     AddConfirm(menu, options) {
@@ -543,6 +657,8 @@ class Menu {
 }
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when menu is opened
  * @memberof Menu
  * @access public
@@ -557,6 +673,8 @@ end)
 Menu.On(Menu, 'open', function(menu) {});
 
 /**
+ * <strong>Type:</strong> `event`
+ * 
  * Event will be triggered when menu is closed
  * @memberof Menu
  * @access public
